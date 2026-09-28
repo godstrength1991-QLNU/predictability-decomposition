@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "predictability-decomposition"
+authors:
+  - family-names: Gao
+    given-names: Qiang
+    orcid: "https://orcid.org/0009-0004-5659-2110"
+    affiliation: "Qilu Normal University"
+doi: 10.5281/zenodo.23016533
+license: MIT
+repository-code: "https://github.com/godstrength1991-QLNU/predictability-decomposition"
