@@ -1,7 +1,6 @@
-# B8 — Predictability decomposition for environmental time series
+# Predictability decomposition for environmental time series
 
-Code for the paper **"When does data-driven forecasting fail? A
-predictability-decomposition framework separating endogenous inertia from
+Code for the paper **"A predictability-decomposition framework separating endogenous inertia from
 exogenous forcing in environmental time series"** (Q. Gao, under review,
 *Environmental Modelling & Software*, 2026).
 
@@ -57,8 +56,14 @@ rebuilds the figures). Precomputed `results/` are included so the figures can be
 regenerated without re-running the models.
 
 ## Cite
-Gao, Q. (2026). When does data-driven forecasting fail? ... *Environmental
-Modelling & Software* (under review). Code archived at Zenodo: <DOI on acceptance>.
+Gao, Q. (2026). A predictability-decomposition framework separating endogenous
+inertia from exogenous forcing in environmental time series. *Environmental
+Modelling & Software* (under review).
+
+Code: Gao, Q. (2026). predictability-decomposition. Zenodo.
+https://doi.org/10.5281/zenodo.23016533
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23016533.svg)](https://doi.org/10.5281/zenodo.23016533)
 
 ## License
 MIT (see `LICENSE`).
