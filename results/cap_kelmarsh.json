@@ -1,0 +1,23 @@
+[
+  {
+    "cap": "weak",
+    "trees": 50,
+    "leaves": 8,
+    "rho_endo_c": -0.006,
+    "rho_exo_c": 0.691
+  },
+  {
+    "cap": "medium",
+    "trees": 150,
+    "leaves": 31,
+    "rho_endo_c": 0.027,
+    "rho_exo_c": 0.801
+  },
+  {
+    "cap": "strong",
+    "trees": 400,
+    "leaves": 63,
+    "rho_endo_c": 0.02,
+    "rho_exo_c": 0.822
+  }
+]

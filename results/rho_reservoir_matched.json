@@ -1,0 +1,26 @@
+{
+  "domain": "Reservoir(ASOS-matched)",
+  "freq": "D",
+  "H": 7,
+  "n_test": 27300,
+  "CRPS_clim": 0.10453619782117858,
+  "CRPS_persist": 0.013487169806767382,
+  "CRPS_hist": 0.012733467107812162,
+  "CRPS_full": 0.012763000724092774,
+  "rho_endo_p": 0.055882939842355886,
+  "rho_exo_p": -0.002189756390980759,
+  "rho_endo_c": 0.878190833670895,
+  "rho_exo_c": -0.0002825204751671982,
+  "persist_share": 0.8709808651177579,
+  "assign": {
+    "\uc804\uc8fc": 5,
+    "\uad70\uc0b0": 1,
+    "\uc815\uc74d": 1,
+    "\uc7a5\uc218": 5,
+    "\ub0a8\uc6d0": 3,
+    "\ubd80\uc548": 4,
+    "\uc784\uc2e4": 2,
+    "\uc21c\ucc3d": 2,
+    "\uace0\ucc3d": 2
+  }
+}

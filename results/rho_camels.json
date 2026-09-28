@@ -1,0 +1,17 @@
+{
+  "domain": "CAMELS(streamflow)",
+  "freq": "D",
+  "H": 7,
+  "n_test": 32583,
+  "CRPS_clim": 0.666958387123319,
+  "CRPS_persist": 0.42908225984460463,
+  "CRPS_hist": 0.38959853718588955,
+  "CRPS_full": 0.32288706889107316,
+  "rho_endo_p": 0.09201900510408985,
+  "rho_exo_p": 0.15547477613960653,
+  "rho_endo_c": 0.4158578035636072,
+  "rho_exo_c": 0.10002343411940871,
+  "persist_share": 0.35665812421177584,
+  "n_basins": 46,
+  "note": "HUC03, ~46 basins, 1980-2014, 3-week origin stride"
+}

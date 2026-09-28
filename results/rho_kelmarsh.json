@@ -1,0 +1,17 @@
+{
+  "domain": "Kelmarsh(wind)",
+  "freq": "D",
+  "H": 7,
+  "n_test": 11935,
+  "CRPS_clim": 259.5474021148467,
+  "CRPS_persist": 250.43856017079477,
+  "CRPS_hist": 251.9806304945844,
+  "CRPS_full": 42.73330830460808,
+  "rho_endo_p": -0.006157479593948972,
+  "rho_exo_p": 0.8355235793053325,
+  "rho_endo_c": 0.029153717427362624,
+  "rho_exo_c": 0.8062007960202462,
+  "persist_share": 0.03509509966129954,
+  "n_turbines": 6,
+  "note": "6 turbines, 2019-2022, daily"
+}

@@ -1,0 +1,17 @@
+{
+  "domain": "Reservoir(full-403 matched)",
+  "freq": "D",
+  "H": 7,
+  "n_test": 28210,
+  "CRPS_clim": 0.12004643411240659,
+  "CRPS_persist": 0.0159479897193441,
+  "CRPS_hist": 0.010823732902356128,
+  "CRPS_full": 0.010342104335835241,
+  "rho_endo_p": 0.3213105166961896,
+  "rho_exo_p": 0.030199954664925328,
+  "rho_endo_c": 0.9098371144267291,
+  "rho_exo_c": 0.0040120189331897165,
+  "persist_share": 0.8671514915269282,
+  "n_dams": 403,
+  "note": "full 403 dams, ASOS per-reservoir matched, stride~200d"
+}

@@ -1,0 +1,17 @@
+{
+  "domain": "HKUST(subtropical PV)",
+  "freq": "D",
+  "H": 7,
+  "n_test": 40189,
+  "CRPS_clim": 2336.4794863288976,
+  "CRPS_persist": 1599.111410525064,
+  "CRPS_hist": 1331.6233930899566,
+  "CRPS_full": 724.5796168799296,
+  "rho_endo_p": 0.16727290898842276,
+  "rho_exo_p": 0.3796131853068985,
+  "rho_endo_c": 0.43007272228089705,
+  "rho_exo_c": 0.2598113014738344,
+  "persist_share": 0.315589364305695,
+  "n_sites": 58,
+  "note": "full 58/60 sites"
+}
