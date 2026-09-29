@@ -1,5 +1,5 @@
 import matplotlib
-matplotlib.use("Agg"); import matplotlib.pyplot as plt
+matplotlib.use("Agg"); matplotlib.rcParams['pdf.fonttype']=42; matplotlib.rcParams['ps.fonttype']=42; import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 fig,ax=plt.subplots(figsize=(9.0,4.6)); ax.axis("off")
 # illustrative CRPS levels (schematic)
@@ -29,7 +29,6 @@ gap(xpos["hist"]+0.075, xpos["full"]+0.075, 0.86, r"$\rho_{\mathrm{exo}}=(\mathr
 ax.text(0.5,0.055,r"redundancy $R=(\mathrm{CRPS}_{\mathsf{clim}}-\mathrm{CRPS}_{\mathsf{climfut}})/\mathrm{CRPS}_{\mathsf{clim}}-\rho_{\mathrm{exo}}$   ($R>0$ redundant, $R<0$ synergistic)",
         ha="center",fontsize=9,color="#c0392b")
 ax.set_xlim(0,1.20); ax.set_ylim(0,1.0)
-ax.set_title("Nested information sets and the CRPS predictability decomposition",fontsize=11,fontweight="bold")
 plt.tight_layout()
 import os; os.makedirs("out/submission",exist_ok=True)
 plt.savefig("out/Fig_framework.png",dpi=200); plt.savefig("out/submission/Fig_framework.pdf"); plt.savefig("out/submission/Fig_framework.png",dpi=600)

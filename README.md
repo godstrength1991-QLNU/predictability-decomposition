@@ -23,7 +23,7 @@ spectrum; block-bootstrap gives 95% intervals.
 ```
 src/      loaders (one per domain) + model_core.py (the engine)
 run/      cache_*.py (raw -> cached daily/hourly) and run_*.py (compute rho / enriched / sweeps)
-figures/  make_*.py (Fig 1-6, graphical abstract)
+figures/  make_*.py (Fig 1-6, graphical abstract); export_figs.py writes vector PDF + >=1000 dpi TIFF
 results/  precomputed rho_*.json, enr_*.json, sweeps, rho_results.csv
 ```
 `src/model_core.py` is domain-agnostic: `build_samples`, `_fit_predict_crps`,
@@ -54,6 +54,9 @@ With data in place: `bash reproduce.sh` (caches each domain, computes the
 enriched metrics, runs the horizon sweep / capacity / per-series checks, and
 rebuilds the figures). Precomputed `results/` are included so the figures can be
 regenerated without re-running the models.
+
+To export publication figures (Fig 1-6, vector PDF + TIFF >= 1000 dpi) into
+`out/figures_final/`: `python figures/export_figs.py`.
 
 ## Cite
 Gao, Q. (2026). A predictability-decomposition framework separating endogenous

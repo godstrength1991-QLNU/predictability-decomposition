@@ -18,7 +18,7 @@ ax.annotate("streamflow / rooftop solar\n(both matter)",(0.44,0.34),fontsize=9,c
 ax.set_xlim(-0.03,1.0); ax.set_ylim(-0.05,0.92)
 ax.set_xlabel(r"endogenous $\rho_{\mathrm{endo}}$  (value of history $\to$ deep learning)",fontsize=11)
 ax.set_ylabel(r"exogenous $\rho_{\mathrm{exo}}$  ($\to$ NWP)",fontsize=10.5)
-ax.set_title("A predictability map for environmental forecasting: where does data-driven forecasting fail?\n"
+ax.set_title("A predictability map for environmental forecasting\n"
              "one climatology-normalised CRPS decomposition places water, solar \u0026 wind on an inertia\u2194forcing spectrum",
              fontsize=10.5,fontweight="bold")
 ax.grid(alpha=0.2)

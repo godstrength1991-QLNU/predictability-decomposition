@@ -1,5 +1,5 @@
 import json, numpy as np, matplotlib
-matplotlib.use("Agg"); import matplotlib.pyplot as plt
+matplotlib.use("Agg"); matplotlib.rcParams['pdf.fonttype']=42; matplotlib.rcParams['ps.fonttype']=42; import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrowPatch
 from matplotlib.lines import Line2D
 B={r["domain"]:r for r in json.load(open("out/rho_B.json"))}
@@ -57,8 +57,6 @@ ax.legend(handles=leg,loc="center",fontsize=8,frameon=True,bbox_to_anchor=(0.64,
 ax.set_xlim(-0.05,XMAX); ax.set_ylim(YMIN,YMAX)
 ax.set_xlabel(r"$\rho_{\mathrm{endo}}$  (endogenous — value of history, vs climatology)",fontsize=11)
 ax.set_ylabel(r"$\rho_{\mathrm{exo}}$  (exogenous — marginal value of a perfect forecast)",fontsize=11)
-ax.set_title("Fig. 1  Predictability-decomposition diagnostic (CRPS, climatology-normalised)\n"
-             "Inertia \u2194 forcing across water, solar \u0026 wind  (points \u00b1 95% block-bootstrap CI)",fontsize=10.5)
 plt.tight_layout()
 import os as _os; _os.makedirs("out/submission",exist_ok=True)
 for _p,_d in [("out/Fig1_quadrant.png",200),("out/submission/Fig1_quadrant.png",600)]: plt.savefig(_p,dpi=_d)
@@ -82,8 +80,6 @@ for i,d in enumerate(order):
 ax.axhline(0,color="0.6",lw=0.8)
 ax.set_xticks(xs); ax.set_xticklabels([lab[d].split(" (")[0] for d in order], rotation=18, ha="right", fontsize=9)
 ax.set_ylabel(r"Value of a perfect forecast  ($\Delta$CRPS / CRPS$_{\mathrm{clim}}$)", fontsize=11)
-ax.set_title("Fig. 2  Is a perfect forecast worth it, and does history already cover it?\n"
-             "gap between the two bars = redundancy (label);  history-dominated \u2192 redundant,  forcing-dominated \u2192 not",fontsize=10)
 ax.legend(fontsize=9, frameon=True, loc="upper right")
 ax.margins(y=0.15)
 plt.tight_layout()

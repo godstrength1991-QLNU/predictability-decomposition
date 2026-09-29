@@ -1,5 +1,5 @@
 import json, matplotlib
-matplotlib.use("Agg"); import matplotlib.pyplot as plt
+matplotlib.use("Agg"); matplotlib.rcParams['pdf.fonttype']=42; matplotlib.rcParams['ps.fonttype']=42; import matplotlib.pyplot as plt
 s=json.load(open("out/camels_sweep.json")); s=sorted(s,key=lambda x:x["H"])
 H=[r["H"] for r in s]; en=[r["rho_endo_c"] for r in s]; ex=[r["rho_exo_c"] for r in s]; ps=[r["persist_share"] for r in s]
 fig,ax=plt.subplots(figsize=(6.6,4.4))
@@ -12,8 +12,6 @@ ax.set_xscale("log"); ax.set_xticks(H); ax.set_xticklabels([str(h) for h in H])
 ax.set_xlabel("forecast horizon $H$ (days, log scale)",fontsize=11)
 ax.set_ylabel("climatology-normalised coefficient",fontsize=11)
 ax.set_ylim(0,0.58); ax.grid(alpha=0.25)
-ax.set_title("CAMELS streamflow: decomposition vs. forecast horizon\n"
-             "memory advantage ($\\rho_{\\mathrm{endo}}$) decays with lead time; forcing value stays flat",fontsize=10)
 ax.legend(fontsize=9,frameon=True,loc="upper right")
 plt.tight_layout()
 import os as _os; _os.makedirs("out/submission",exist_ok=True)
