@@ -9,7 +9,7 @@ def cap(*a,**k):
     f=plt.gcf()
     if f not in captured: captured.append(f)
 plt.savefig=cap; _close=plt.close; plt.close=lambda *a,**k: None
-jobs=[("figures/make_fig_synthetic.py",["Fig1_synthetic_validation"]),
+jobs=[("figures/make_fig1_synthetic.py",["Fig1_synthetic_validation"]),
       ("figures/make_schematic.py",["Fig2_framework"]),
       ("figures/make_figs.py",["Fig3_predictability_plane","Fig5_redundancy"]),
       ("figures/make_fig_horizon.py",["Fig4_horizon_dependence"]),
