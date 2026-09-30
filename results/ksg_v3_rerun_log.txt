@@ -1,0 +1,4 @@
+tanh  : 内生 Spearman(KSG_MI,Δ)=1.0000  MI范围[0.049,0.235]
+cubic : 内生 Spearman(KSG_MI,Δ)=1.0000  MI范围[0.000,1.448]
+
+→ 若tanh/cubic回到~1.0, 证实sin的0.89是周期饱和伪影, 命题3在真单调非线性下成立

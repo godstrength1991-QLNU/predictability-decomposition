@@ -2,7 +2,7 @@ import pickle, json, sys, os, time
 from model_core import run_pooled
 from load_camels import EXO
 c=pickle.load(open("data/camels/camels_cache.pkl","rb"))
-frames=c["frames"][::5]                                  # ~18 basins
+frames=c["frames"][::5]                                  # 19 of 92 basins (every fifth)
 path="out/camels_sweep.json"
 res=json.load(open(path)) if os.path.exists(path) else []
 for H in [int(x) for x in sys.argv[1:]]:

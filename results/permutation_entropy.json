@@ -1,0 +1,67 @@
+{
+  "rows": [
+    {
+      "domain": "Reservoir(ASOS-net)",
+      "PE": 0.235,
+      "n_series": 403,
+      "rho_endo": 0.893,
+      "rho_exo": -0.004,
+      "rho_tot": 0.889
+    },
+    {
+      "domain": "CAMELS(streamflow)",
+      "PE": 0.75,
+      "n_series": 46,
+      "rho_endo": 0.411,
+      "rho_exo": 0.099,
+      "rho_tot": 0.51
+    },
+    {
+      "domain": "DKASC_site13",
+      "PE": 0.959,
+      "n_series": 1,
+      "rho_endo": 0.086,
+      "rho_exo": 0.669,
+      "rho_tot": 0.755
+    },
+    {
+      "domain": "DKASC_site31",
+      "PE": 0.969,
+      "n_series": 1,
+      "rho_endo": 0.075,
+      "rho_exo": 0.645,
+      "rho_tot": 0.719
+    },
+    {
+      "domain": "DKASC_M9",
+      "PE": 0.972,
+      "n_series": 1,
+      "rho_endo": 0.078,
+      "rho_exo": 0.532,
+      "rho_tot": 0.611
+    },
+    {
+      "domain": "HKUST(subtropical PV)",
+      "PE": 0.977,
+      "n_series": 58,
+      "rho_endo": 0.155,
+      "rho_exo": 0.414,
+      "rho_tot": 0.568
+    },
+    {
+      "domain": "Kelmarsh(wind)",
+      "PE": 0.973,
+      "n_series": 6,
+      "rho_endo": 0.027,
+      "rho_exo": 0.801,
+      "rho_tot": 0.828
+    }
+  ],
+  "spearman_PE_vs": {
+    "rho_endo": -0.61,
+    "rho_exo": 0.5,
+    "rho_tot": -0.25
+  },
+  "order": 4,
+  "delay": 1
+}

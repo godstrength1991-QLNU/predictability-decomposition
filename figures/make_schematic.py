@@ -24,11 +24,11 @@ ax.text(x+0.275,0.20,"calendar\n+ future forcing\n(no history)",ha="center",va="
 def gap(x1,x2,y,label,c):
     ax.add_patch(FancyArrowPatch((x1,y),(x2,y),arrowstyle="<->",mutation_scale=11,color=c,lw=1.4))
     ax.text((x1+x2)/2,y+0.025,label,ha="center",fontsize=9.5,color=c,fontweight="bold")
-gap(xpos["clim"]+0.075, xpos["hist"]+0.075, 0.94, r"$\rho_{\mathrm{endo}}=(\mathrm{CRPS}_{\mathsf{clim}}-\mathrm{CRPS}_{\mathsf{hist}})/\mathrm{CRPS}_{\mathsf{clim}}$", "#1a5276")
-gap(xpos["hist"]+0.075, xpos["full"]+0.075, 0.86, r"$\rho_{\mathrm{exo}}=(\mathrm{CRPS}_{\mathsf{hist}}-\mathrm{CRPS}_{\mathsf{full}})/\mathrm{CRPS}_{\mathsf{clim}}$", "#148f4b")
+gap(xpos["clim"]+0.075, xpos["hist"]+0.075, 1.04, r"$\rho_{\mathrm{endo}}=(\mathrm{CRPS}_{\mathsf{clim}}-\mathrm{CRPS}_{\mathsf{hist}})/\mathrm{CRPS}_{\mathsf{clim}}$", "#1a5276")
+gap(xpos["hist"]+0.075, xpos["full"]+0.075, 0.93, r"$\rho_{\mathrm{exo}}=(\mathrm{CRPS}_{\mathsf{hist}}-\mathrm{CRPS}_{\mathsf{full}})/\mathrm{CRPS}_{\mathsf{clim}}$", "#148f4b")
 ax.text(0.5,0.055,r"redundancy $R=(\mathrm{CRPS}_{\mathsf{clim}}-\mathrm{CRPS}_{\mathsf{climfut}})/\mathrm{CRPS}_{\mathsf{clim}}-\rho_{\mathrm{exo}}$   ($R>0$ redundant, $R<0$ synergistic)",
         ha="center",fontsize=9,color="#c0392b")
-ax.set_xlim(0,1.20); ax.set_ylim(0,1.0)
+ax.set_xlim(0,1.20); ax.set_ylim(0,1.10)
 plt.tight_layout()
 import os; os.makedirs("out/submission",exist_ok=True)
 plt.savefig("out/Fig_framework.png",dpi=200); plt.savefig("out/submission/Fig_framework.pdf"); plt.savefig("out/submission/Fig_framework.png",dpi=600)

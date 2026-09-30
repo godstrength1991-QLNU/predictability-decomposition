@@ -1,0 +1,82 @@
+{
+  "rows": [
+    {
+      "domain": "Reservoir(ASOS-net)",
+      "rho_endo": 0.893,
+      "rho_exo": -0.004,
+      "R": 0.051,
+      "composition": 0.041,
+      "interaction": 0.009,
+      "shapley_endo": 0.867,
+      "shapley_exo": 0.021,
+      "regime_same": true
+    },
+    {
+      "domain": "CAMELS(streamflow)",
+      "rho_endo": 0.411,
+      "rho_exo": 0.099,
+      "R": 0.078,
+      "composition": 0.073,
+      "interaction": 0.005,
+      "shapley_endo": 0.372,
+      "shapley_exo": 0.138,
+      "regime_same": true
+    },
+    {
+      "domain": "DKASC_site13",
+      "rho_endo": 0.086,
+      "rho_exo": 0.669,
+      "R": 0.118,
+      "composition": 0.068,
+      "interaction": 0.05,
+      "shapley_endo": 0.027,
+      "shapley_exo": 0.728,
+      "regime_same": true
+    },
+    {
+      "domain": "DKASC_site31",
+      "rho_endo": 0.075,
+      "rho_exo": 0.645,
+      "R": 0.093,
+      "composition": 0.055,
+      "interaction": 0.038,
+      "shapley_endo": 0.028,
+      "shapley_exo": 0.691,
+      "regime_same": true
+    },
+    {
+      "domain": "DKASC_M9",
+      "rho_endo": 0.078,
+      "rho_exo": 0.532,
+      "R": 0.073,
+      "composition": 0.047,
+      "interaction": 0.025,
+      "shapley_endo": 0.042,
+      "shapley_exo": 0.569,
+      "regime_same": true
+    },
+    {
+      "domain": "HKUST(subtropical PV)",
+      "rho_endo": 0.155,
+      "rho_exo": 0.414,
+      "R": -0.172,
+      "composition": 0.037,
+      "interaction": -0.209,
+      "shapley_endo": 0.241,
+      "shapley_exo": 0.328,
+      "regime_same": true
+    },
+    {
+      "domain": "Kelmarsh(wind)",
+      "rho_endo": 0.027,
+      "rho_exo": 0.801,
+      "R": 0.017,
+      "composition": 0.022,
+      "interaction": -0.006,
+      "shapley_endo": 0.019,
+      "shapley_exo": 0.809,
+      "regime_same": true
+    }
+  ],
+  "max_abs_half_R": 0.086
+}

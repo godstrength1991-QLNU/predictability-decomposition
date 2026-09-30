@@ -12,9 +12,9 @@ ax.plot([0,0.95],[0,0.95],ls=":",color="0.7",lw=1)
 for d,p in B.items():
     mk="D" if d=="Reservoir(ASOS-net)" else "s"
     ax.scatter(p["rho_endo_c"],p["rho_exo_c"],marker=mk,s=140,color=col[d],edgecolor="k",lw=0.7,zorder=5)
-ax.annotate("wind / desert solar\nforecast is decisive (NWP)",(0.05,0.80),fontsize=10,color="#c0392b",fontweight="bold",va="center")
+ax.annotate("wind and solar (forcing-dominated)\nforecast is decisive (NWP)",(0.05,0.80),fontsize=10,color="#c0392b",fontweight="bold",va="center")
 ax.annotate("reservoir\nhistory suffices (DL);\nNWP redundant",(0.92,0.06),fontsize=10,color="#1a5276",fontweight="bold",ha="right")
-ax.annotate("streamflow / rooftop solar\n(both matter)",(0.44,0.34),fontsize=9,color="0.35")
+ax.annotate("natural streamflow\n(memory-leaning)",(0.45,0.15),fontsize=9,color="0.35")
 ax.set_xlim(-0.03,1.0); ax.set_ylim(-0.05,0.92)
 ax.set_xlabel(r"endogenous $\rho_{\mathrm{endo}}$  (value of history $\to$ deep learning)",fontsize=11)
 ax.set_ylabel(r"exogenous $\rho_{\mathrm{exo}}$  ($\to$ NWP)",fontsize=10.5)

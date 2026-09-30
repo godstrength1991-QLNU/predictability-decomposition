@@ -13,8 +13,8 @@ for name,trees,leaves in caps:
         import load_kelmarsh as L; c=pickle.load(open("data/kelmarsh_cache.pkl","rb"))
         r=run_pooled(f"Kelmarsh[{name}]", c["frames"], "D",7, L.EXO, n_est=trees)
     elif dom=="M9":
-        import load_dkasc as L; st=pickle.load(open("data/dkasc_cache.pkl","rb"))
-        r=run_domain(f"M9[{name}]", st["DKASC_M9"]["daily"], "D",7, L.EXO, n_est=trees)
+        import load_dkasc as L, dkasc_rc
+        r=run_domain(f"M9[{name}]", dkasc_rc.load("DKASC_M9","D"), "D",7, L.EXO, n_est=trees)
     out.append({"cap":name,"trees":trees,"leaves":leaves,
                 "rho_endo_c":round(r["rho_endo_c"],3),"rho_exo_c":round(r["rho_exo_c"],3)})
     print(f"    {name} {time.time()-t:.0f}s")

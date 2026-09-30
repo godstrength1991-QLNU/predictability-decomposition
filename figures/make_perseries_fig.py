@@ -12,7 +12,11 @@ for ax,o,cols,ttl in [(a1,hk,["#8e44ad","#148f4b"],None),(a2,cm,["#2874a6","#e67
     ax.axhline(0,color="0.8",lw=0.8); ax.grid(alpha=0.2,axis="y")
 rf=arr(hk,"redu_frac")*100
 a1.set_ylabel("climatology-normalised coefficient")
-plt.tight_layout(rect=[0,0,1,0.95])
+a1.set_ylim(top=max(arr(hk,"endo").max(),arr(hk,"exo").max())*1.18)
+a2.set_ylim(top=max(arr(cm,"endo").max(),arr(cm,"exo").max())*1.15)
+a1.text(0.03,0.97,f"(a) HKUST, per site (n={len(hk)})",transform=a1.transAxes,fontsize=9.5,fontweight="bold",va="top")
+a2.text(0.97,0.97,f"(b) CAMELS, per basin (n={len(cm)})",transform=a2.transAxes,fontsize=9.5,fontweight="bold",va="top",ha="right")
+plt.tight_layout()
 import os; os.makedirs("out/submission",exist_ok=True)
 for p,d in [("out/Fig_distributions.png",200),("out/submission/Fig_distributions.png",600)]: plt.savefig(p,dpi=d)
 plt.savefig("out/submission/Fig_distributions.pdf"); print("saved Fig_distributions")

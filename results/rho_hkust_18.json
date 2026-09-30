@@ -1,0 +1,17 @@
+{
+  "domain": "HKUST(18 sites)",
+  "freq": "D",
+  "H": 7,
+  "n_test": 11274,
+  "CRPS_clim": 2206.882755028391,
+  "CRPS_persist": 1507.082205578786,
+  "CRPS_hist": 1267.0272918964222,
+  "CRPS_full": 688.666871303859,
+  "rho_endo_p": 0.1592845518271992,
+  "rho_exo_p": 0.38376169425373,
+  "rho_endo_c": 0.42587466914157734,
+  "rho_exo_c": 0.262071203952619,
+  "persist_share": 0.3170991063549283,
+  "n_sites": 18,
+  "config": "19 quantiles, 200 trees, origin stride 2"
+}

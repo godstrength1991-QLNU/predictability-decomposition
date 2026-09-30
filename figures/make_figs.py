@@ -19,45 +19,53 @@ def err(p,key):  # asymmetric err from CI
 # ---------- FIG 1: quadrant with bootstrap error bars ----------
 fig,ax=plt.subplots(figsize=(8,6.9))
 XMAX,YMIN,YMAX=1.0,-0.12,0.92
-ax.axhline(0,color="0.8",lw=0.8); ax.axhline(0.30,color="0.92",lw=1); ax.axvline(0.30,color="0.92",lw=1)
+ax.axhline(0,color="0.8",lw=0.8)
 ax.plot([0,YMAX],[0,YMAX],ls=":",color="0.65",lw=1)
-ax.text(0.30,0.90,"FORCING-DOMINATED\nfuture weather is key",fontsize=9,color="#c0392b",fontweight="bold",va="top")
-ax.text(0.97,0.90,"DUAL\nboth matter",fontsize=9,color="0.5",ha="right",va="top")
-ax.text(0.97,0.17,"INERTIA-DOMINATED\nhistory suffices \u00b7 NWP useless",fontsize=9,color="#1a5276",fontweight="bold",ha="right",va="bottom")
+ax.text(0.33,0.90,"FORCING-DOMINATED\nfuture weather is key",fontsize=9,color="#c0392b",fontweight="bold",va="top",zorder=6,bbox=dict(boxstyle="round,pad=0.15",fc="white",ec="none",alpha=0.95))
+ax.text(0.97,0.62,"DUAL\nboth matter",fontsize=9,color="0.5",ha="right",va="top",zorder=6,bbox=dict(boxstyle="round,pad=0.15",fc="white",ec="none",alpha=0.95))
+ax.text(0.97,0.17,"INERTIA-DOMINATED\nhistory suffices \u00b7 NWP useless",fontsize=9,color="#1a5276",fontweight="bold",ha="right",va="bottom",zorder=6,bbox=dict(boxstyle="round,pad=0.15",fc="white",ec="none",alpha=0.95))
 ax.text(0.02,-0.02,"low predictability",fontsize=8,color="0.55",va="top")
 dk=["DKASC_site13","DKASC_site31","DKASC_M9"]
 for s in dk:  # A->B arrows
     ax_,ay_=A[s][EN],A[s][EX]; bx_,by_=B[s][EN],B[s][EX]
     ax.add_patch(FancyArrowPatch((ax_,ay_),(bx_,by_),arrowstyle="-|>",mutation_scale=11,color=col[s],lw=1.2,alpha=0.55,zorder=2))
-    ax.scatter([ax_],[ay_],marker="o",s=70,color=col[s],edgecolor="k",lw=0.5,alpha=0.8,zorder=3)
+    ax.scatter([ax_],[ay_],marker="o",s=50,color=col[s],edgecolor="k",lw=0.5,alpha=0.8,zorder=3)
 for d in order:
-    p=B[d]; c=col[d]; mk="D" if d=="Reservoir(ASOS-net)" else "s"; sz=200 if mk=="D" else 130
+    p=B[d]; c=col[d]; mk="D" if d=="Reservoir(ASOS-net)" else "s"; sz=170 if mk=="D" else 85
     ax.errorbar(p[EN],p[EX],xerr=err(p,"endo"),yerr=err(p,"exo"),fmt="none",ecolor=c,elinewidth=1.1,capsize=2,alpha=0.9,zorder=4)
     ax.scatter(p[EN],p[EX],marker=mk,s=sz,color=c,edgecolor="k",lw=0.7,zorder=5)
 # labels
-off={"Reservoir(ASOS-net)":(-14,-2,"right","center"),"Kelmarsh(wind)":(11,0,"left","center"),
+off={"Reservoir(ASOS-net)":(14,-14,"right","top"),"Kelmarsh(wind)":(16,0,"left","center"),
      "DKASC_site13":(9,6,"left","bottom"),"HKUST(subtropical PV)":(8,6,"left","bottom"),
-     "DKASC_M9":(9,-11,"left","top"),"DKASC_site31":(9,7,"left","bottom"),"CAMELS(streamflow)":(8,-11,"left","top")}
+     "DKASC_M9":(9,5,"left","bottom"),"DKASC_site31":(9,3,"left","bottom"),"CAMELS(streamflow)":(9,-9,"left","top")}
+LEAD={"Kelmarsh(wind)":0.82,"DKASC_site13":0.74,"DKASC_site31":0.665,"DKASC_M9":0.56}   # label y (data units), x=0.20
+BBX=dict(boxstyle="round,pad=0.15",fc="white",ec="none",alpha=0.95)
 for d in order:
-    p=B[d]; dx,dy,ha,va=off[d]
-    t=lab[d]+(f"\npersist_share={p['persist_share']:.2f}" if d=="Reservoir(ASOS-net)" else "")
-    ax.annotate(t,(p[EN],p[EX]),textcoords="offset points",xytext=(dx,dy),fontsize=8.5 if d.startswith("DKASC") else 9,
-                color=col[d],fontweight="bold",ha=ha,va=va)
+    p=B[d]; t=lab[d]+(f"\npersist_share={p['persist_share']:.2f}" if d=="Reservoir(ASOS-net)" else "")
+    fs=8.5 if d.startswith("DKASC") else 9
+    if d in LEAD:
+        ax.annotate(t,(p[EN],p[EX]),xytext=(0.20,LEAD[d]),textcoords="data",fontsize=fs,color=col[d],fontweight="bold",
+                    ha="left",va="center",zorder=7,bbox=BBX,
+                    arrowprops=dict(arrowstyle="-",color=col[d],lw=0.7,shrinkA=0,shrinkB=5,alpha=0.8))
+    else:
+        dx,dy,ha,va=off[d]
+        ax.annotate(t,(p[EN],p[EX]),textcoords="offset points",xytext=(dx,dy),fontsize=fs,
+                    color=col[d],fontweight="bold",ha=ha,va=va,zorder=7,bbox=BBX)
 import json as _json
 _rawhk=_json.load(open("out/enr_hkust.json"))
 ax.scatter(_rawhk["rho_endo_c"],_rawhk["rho_exo_c"],marker="s",s=90,facecolor="none",edgecolor=col["HKUST(subtropical PV)"],lw=1.1,alpha=0.7,zorder=4)
 ax.annotate("",(B["HKUST(subtropical PV)"]["rho_endo_c"],B["HKUST(subtropical PV)"]["rho_exo_c"]),xytext=(_rawhk["rho_endo_c"],_rawhk["rho_exo_c"]),arrowprops=dict(arrowstyle="->",color=col["HKUST(subtropical PV)"],lw=1.0,ls=":",alpha=0.7),zorder=3)
-ax.annotate("raw pooled",(_rawhk["rho_endo_c"],_rawhk["rho_exo_c"]),textcoords="offset points",xytext=(6,-10),fontsize=7.5,color=col["HKUST(subtropical PV)"],alpha=0.8)
-leg=[Line2D([0],[0],marker="D",color="w",markerfacecolor="0.3",markeredgecolor="k",ms=11,label="Reservoir (daily, 7 d)"),
-     Line2D([0],[0],marker="o",color="w",markerfacecolor="0.3",markeredgecolor="k",ms=8,label="Solar Horizon A (intraday, 24 h)"),
-     Line2D([0],[0],marker="s",color="w",markerfacecolor="0.3",markeredgecolor="k",ms=10,label="Daily, 7 d (solar/wind/streamflow)"),
+ax.annotate("raw pooled",(_rawhk["rho_endo_c"],_rawhk["rho_exo_c"]),textcoords="offset points",xytext=(5,-12),ha="left",fontsize=7.5,zorder=7,bbox=dict(boxstyle="round,pad=0.15",fc="white",ec="none",alpha=0.95),color=col["HKUST(subtropical PV)"],alpha=0.8)
+leg=[Line2D([0],[0],marker="D",color="w",markerfacecolor="0.3",markeredgecolor="k",ms=11,label="Reservoir, daily 7 d"),
+     Line2D([0],[0],marker="o",color="w",markerfacecolor="0.3",markeredgecolor="k",ms=8,label="Solar, intraday 24 h"),
+     Line2D([0],[0],marker="s",color="w",markerfacecolor="0.3",markeredgecolor="k",ms=10,label="Other domains, daily 7 d"),
      Line2D([0],[0],color="0.3",lw=1.2,label="A \u2192 B shift"),
-     Line2D([0],[0],color="0.3",lw=1.1,marker="|",label="95% bootstrap CI")]
-ax.legend(handles=leg,loc="center",fontsize=8,frameon=True,bbox_to_anchor=(0.64,0.585))
+     Line2D([0],[0],color="0.3",lw=1.1,marker="|",label="95% CI")]
+ax.legend(handles=leg,loc="upper center",bbox_to_anchor=(0.5,-0.095),ncol=5,fontsize=8.3,frameon=False,columnspacing=1.2,handletextpad=0.4,markerscale=0.8)
 ax.set_xlim(-0.05,XMAX); ax.set_ylim(YMIN,YMAX)
 ax.set_xlabel(r"$\rho_{\mathrm{endo}}$  (endogenous — value of history, vs climatology)",fontsize=11)
 ax.set_ylabel(r"$\rho_{\mathrm{exo}}$  (exogenous — marginal value of a perfect forecast)",fontsize=11)
-plt.tight_layout()
+plt.tight_layout(); plt.subplots_adjust(bottom=0.155)
 import os as _os; _os.makedirs("out/submission",exist_ok=True)
 for _p,_d in [("out/Fig1_quadrant.png",200),("out/submission/Fig1_quadrant.png",600)]: plt.savefig(_p,dpi=_d)
 plt.savefig("out/submission/Fig1_quadrant.pdf"); plt.close()
@@ -65,8 +73,10 @@ print("saved Fig1 (with CIs)")
 
 # ---------- FIG 2: forecast value standalone vs given-history (gap = redundancy) ----------
 fig,ax=plt.subplots(figsize=(9,5.4))
-xs=np.arange(len(order)); w=0.38
-for i,d in enumerate(order):
+border=["Kelmarsh(wind)","DKASC_M9","DKASC_site31","DKASC_site13","CAMELS(streamflow)","Reservoir(ASOS-net)","HKUST(subtropical PV)"]
+blab=dict(lab); blab["HKUST(subtropical PV)"]="HKUST PV (cap.-norm.)"
+xs=np.arange(len(border)); w=0.38
+for i,d in enumerate(border):
     p=B[d]
     ax.bar(i-w/2, p["exo_given_clim"], w, color=col[d], alpha=0.45, edgecolor="k", lw=0.5,
            label="forecast value alone (vs climatology)" if i==0 else None)
@@ -78,7 +88,7 @@ for i,d in enumerate(order):
     ax.text(i, top+0.03, tag, ha="center", fontsize=8.5, fontweight="bold",
             color=("#1a5276" if rf>60 else "#c0392b" if rf<10 else "0.3"))
 ax.axhline(0,color="0.6",lw=0.8)
-ax.set_xticks(xs); ax.set_xticklabels([lab[d].split(" (")[0] for d in order], rotation=18, ha="right", fontsize=9)
+ax.set_xticks(xs); ax.set_xticklabels([blab[d] if d=="HKUST(subtropical PV)" else lab[d].split(" (")[0] for d in border], rotation=18, ha="right", fontsize=9)
 ax.set_ylabel(r"Value of a perfect forecast  ($\Delta$CRPS / CRPS$_{\mathrm{clim}}$)", fontsize=11)
 ax.legend(fontsize=9, frameon=True, loc="upper right")
 ax.margins(y=0.15)

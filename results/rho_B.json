@@ -69,100 +69,103 @@
     "domain": "DKASC_site13",
     "freq": "D",
     "H": 7,
-    "n_test": 7196,
-    "CRPS_clim": 0.13791788034049474,
-    "CRPS_climfut": 0.03810625777390251,
-    "CRPS_persist": 0.1252823948875022,
-    "CRPS_hist": 0.1239713199712314,
-    "CRPS_full": 0.04335674947567656,
-    "rho_endo_c": 0.10112220645235961,
-    "rho_exo_c": 0.5845113795001184,
-    "persist_share": 0.09161600672659533,
-    "exo_given_clim": 0.7237032814032167,
-    "redundancy": 0.13919190190309827,
-    "redundancy_frac": 0.19233283236358087,
+    "n_test": 7511,
+    "CRPS_clim": 0.10155093869818539,
+    "CRPS_climfut": 0.02166177625367814,
+    "CRPS_persist": 0.0916242335331553,
+    "CRPS_hist": 0.09281057955645541,
+    "CRPS_full": 0.02489795462357665,
+    "rho_endo_c": 0.08606871835726476,
+    "rho_exo_c": 0.6687542803983189,
+    "persist_share": 0.09775099366174027,
+    "exo_given_clim": 0.7866905364798443,
+    "redundancy": 0.11793625608152547,
+    "redundancy_frac": 0.14991442074446143,
     "ci_endo": [
-      0.093,
-      0.11
+      0.076,
+      0.097
     ],
     "ci_exo": [
-      0.568,
-      0.599
+      0.653,
+      0.685
     ],
     "ci_pshr": [
-      0.084,
-      0.1
+      0.085,
+      0.109
     ],
     "ci_redu": [
-      0.131,
-      0.148
-    ]
+      0.108,
+      0.128
+    ],
+    "note": "target drift-corrected (trailing 90-day 99th percentile)"
   },
   {
     "domain": "DKASC_site31",
     "freq": "D",
     "H": 7,
-    "n_test": 4431,
-    "CRPS_clim": 0.207740338165312,
-    "CRPS_climfut": 0.14593921257661688,
-    "CRPS_persist": 0.15917451696563928,
-    "CRPS_hist": 0.12407551537196447,
-    "CRPS_full": 0.09464325059617966,
-    "rho_endo_c": 0.40273749206458975,
-    "rho_exo_c": 0.14167814029629486,
-    "persist_share": 0.23378137163243598,
-    "exo_given_clim": 0.2974921776603449,
-    "redundancy": 0.15581403736405006,
-    "redundancy_frac": 0.5237584348921849,
+    "n_test": 4830,
+    "CRPS_clim": 0.10511703193061936,
+    "CRPS_climfut": 0.02752803130682572,
+    "CRPS_persist": 0.09630112814765497,
+    "CRPS_hist": 0.09728331825478638,
+    "CRPS_full": 0.029516507489631954,
+    "rho_endo_c": 0.07452373351830828,
+    "rho_exo_c": 0.6446796443975198,
+    "persist_share": 0.08386751053609627,
+    "exo_given_clim": 0.738120161868772,
+    "redundancy": 0.09344051747125226,
+    "redundancy_frac": 0.12659255538377334,
     "ci_endo": [
-      0.386,
-      0.418
+      0.066,
+      0.085
     ],
     "ci_exo": [
-      0.11,
-      0.171
+      0.624,
+      0.664
     ],
     "ci_pshr": [
-      0.225,
-      0.243
+      0.072,
+      0.095
     ],
     "ci_redu": [
-      0.145,
-      0.167
-    ]
+      0.083,
+      0.104
+    ],
+    "note": "target drift-corrected (trailing 90-day 99th percentile)"
   },
   {
     "domain": "DKASC_M9",
     "freq": "D",
     "H": 7,
-    "n_test": 4711,
-    "CRPS_clim": 0.8950131349678597,
-    "CRPS_climfut": 0.5222761674493047,
-    "CRPS_persist": 0.6109432563012211,
-    "CRPS_hist": 0.47718608654540234,
-    "CRPS_full": 0.23528312327541862,
-    "rho_endo_c": 0.46683901285701435,
-    "rho_exo_c": 0.2702786739310486,
-    "persist_share": 0.3173918544523256,
-    "exo_given_clim": 0.41645977355621727,
-    "redundancy": 0.14618109962516868,
-    "redundancy_frac": 0.351008930290925,
+    "n_test": 4998,
+    "CRPS_clim": 0.10518461478471079,
+    "CRPS_climfut": 0.04156647290994096,
+    "CRPS_persist": 0.09305260630111942,
+    "CRPS_hist": 0.09695150356883211,
+    "CRPS_full": 0.04096876388767674,
+    "rho_endo_c": 0.07827296066758434,
+    "rho_exo_c": 0.5322331578219821,
+    "persist_share": 0.11534014274257565,
+    "exo_given_clim": 0.6048236427445386,
+    "redundancy": 0.07259048492255649,
+    "redundancy_frac": 0.12001925816451056,
     "ci_endo": [
-      0.448,
-      0.483
+      0.064,
+      0.093
     ],
     "ci_exo": [
-      0.254,
-      0.291
+      0.508,
+      0.558
     ],
     "ci_pshr": [
-      0.297,
-      0.337
+      0.099,
+      0.131
     ],
     "ci_redu": [
-      0.122,
-      0.169
-    ]
+      0.057,
+      0.089
+    ],
+    "note": "target drift-corrected (trailing 90-day 99th percentile)"
   },
   {
     "domain": "HKUST(subtropical PV)",
@@ -195,8 +198,7 @@
     "ci_redu": [
       -0.213,
       -0.132
-    ],
-    "note": "capacity-normalised (primary)"
+    ]
   },
   {
     "domain": "Kelmarsh(wind)",

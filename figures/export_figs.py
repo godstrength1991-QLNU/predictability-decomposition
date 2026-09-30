@@ -1,4 +1,4 @@
-"""Export all manuscript figures (Fig 1-6) as vector PDF + >=1000 dpi TIFF.
+"""Export all manuscript figures (Fig 1-7) as vector PDF + >=1000 dpi TIFF.
 Run from the repository root after the results are in out/."""
 import runpy, os, matplotlib
 matplotlib.use("Agg"); matplotlib.rcParams['pdf.fonttype']=42
@@ -13,7 +13,8 @@ jobs=[("figures/make_fig1_synthetic.py",["Fig1_synthetic_validation"]),
       ("figures/make_schematic.py",["Fig2_framework"]),
       ("figures/make_figs.py",["Fig3_predictability_plane","Fig5_redundancy"]),
       ("figures/make_fig_horizon.py",["Fig4_horizon_dependence"]),
-      ("figures/make_perseries_fig.py",["Fig6_within_domain"])]
+      ("figures/make_perseries_fig.py",["Fig7_within_domain"]),
+      ("figures/make_fig_degradation.py",["Fig6_imperfect_forecast"])]
 for script,names in jobs:
     captured.clear(); runpy.run_path(script)
     assert len(captured)>=len(names), (script,len(captured))
