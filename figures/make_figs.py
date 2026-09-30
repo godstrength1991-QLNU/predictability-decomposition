@@ -22,9 +22,7 @@ XMAX,YMIN,YMAX=1.0,-0.12,0.92
 ax.axhline(0,color="0.8",lw=0.8)
 ax.plot([0,YMAX],[0,YMAX],ls=":",color="0.65",lw=1)
 ax.text(0.33,0.90,"FORCING-DOMINATED\nfuture weather is key",fontsize=9,color="#c0392b",fontweight="bold",va="top",zorder=6,bbox=dict(boxstyle="round,pad=0.15",fc="white",ec="none",alpha=0.95))
-ax.text(0.97,0.62,"DUAL\nboth matter",fontsize=9,color="0.5",ha="right",va="top",zorder=6,bbox=dict(boxstyle="round,pad=0.15",fc="white",ec="none",alpha=0.95))
-ax.text(0.97,0.17,"INERTIA-DOMINATED\nhistory suffices \u00b7 NWP useless",fontsize=9,color="#1a5276",fontweight="bold",ha="right",va="bottom",zorder=6,bbox=dict(boxstyle="round,pad=0.15",fc="white",ec="none",alpha=0.95))
-ax.text(0.02,-0.02,"low predictability",fontsize=8,color="0.55",va="top")
+ax.text(0.97,0.17,"INERTIA-DOMINATED\nhistory suffices \u00b7 forecasts add little",fontsize=9,color="#1a5276",fontweight="bold",ha="right",va="bottom",zorder=6,bbox=dict(boxstyle="round,pad=0.15",fc="white",ec="none",alpha=0.95))
 dk=["DKASC_site13","DKASC_site31","DKASC_M9"]
 for s in dk:  # A->B arrows
     ax_,ay_=A[s][EN],A[s][EX]; bx_,by_=B[s][EN],B[s][EX]

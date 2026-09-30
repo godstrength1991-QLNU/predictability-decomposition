@@ -4,7 +4,7 @@ All values are read from the files in this folder; none are typed by hand.
 
 | Manuscript item | Source file(s) | Configuration |
 |---|---|---|
-| Table 2 (predictability by domain, 95% CI; DKASC drift-corrected, Eq. 15) | `enr_reservoir.json`, `enr_camels.json`, `enr_DKASC_site13.json`, `enr_DKASC_site31.json`, `enr_DKASC_M9.json`, `enr_hkust_norm.json` (HKUST, capacity-normalised), `enr_kelmarsh.json` | horizon B (daily, H=7), 13 quantile levels, 150 trees, 300 block-bootstrap replicates |
+| Table 2 (predictability by domain, 95% CI; DKASC drift-corrected, Eq. 21) | `enr_reservoir.json`, `enr_camels.json`, `enr_DKASC_site13.json`, `enr_DKASC_site31.json`, `enr_DKASC_M9.json`, `enr_hkust_norm.json` (HKUST, capacity-normalised), `enr_kelmarsh.json` | horizon B (daily, H=7), 13 quantile levels, 150 trees, 300 block-bootstrap replicates |
 | Table 3 (forecast value, redundancy with CI, composition/interaction) | same `enr_*.json` (ci_redu); composition and interaction in `shapley_attribution.json`; HKUST raw pooled row: `enr_hkust.json` | as above |
 | Table 4 (permutation entropy) | `permutation_entropy.json` | order 4, delay 1, median over series |
 | Table 5 (rolling-origin evaluation) | `rolling_reservoir.json`, `rolling_site13.json`, `rolling_site31.json`, `rolling_M9.json`, `rolling_kelmarsh.json` | three consecutive test blocks, primary configuration |
@@ -20,5 +20,5 @@ All values are read from the files in this folder; none are typed by hand.
 | Fig. 3 (predictability plane) | `rho_B.json` (= enr_* values, HKUST capacity-normalised); arrows: `rho_A.json`; faded HKUST point: `enr_hkust.json` | horizon A: hourly, H=24, 19 quantiles, 200 trees, one origin per 72 h |
 | Fig. 4 (horizon dependence) | `camels_sweep.json` | 19-basin subset (every fifth of 92), 150 trees |
 | Fig. 5 (forecast value) | `rho_B.json` | horizon B |
-| Fig. 6 (imperfect forecast), Eq. (16) | `degrade_kelmarsh.json`, `degrade_DKASC_site13.json`, `degrade_hkust.json`, `degrade_DKASC_M9.json`, `degrade_DKASC_site31.json`, `degrade_camels.json` | horizon B primary configuration; Gaussian forcing errors lambda in {0, 0.25, 0.5, 1}, seed 0 |
+| Fig. 6 (imperfect forecast), Eq. (22) | `degrade_kelmarsh.json`, `degrade_DKASC_site13.json`, `degrade_hkust.json`, `degrade_DKASC_M9.json`, `degrade_DKASC_site31.json`, `degrade_camels.json` | horizon B primary configuration; Gaussian forcing errors lambda in {0, 0.25, 0.5, 1}, seed 0 |
 | Fig. 7 (within-domain) | `perseries_hkust.json` (34 sites), `perseries_camels.json` (30 basins) | single series, 7 quantiles, 40 trees, 16 leaves |
