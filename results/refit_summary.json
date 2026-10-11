@@ -1,0 +1,93 @@
+[
+  {
+    "domain": "Reservoir(ASOS-net)",
+    "n_refits": 5,
+    "endo_mean": 0.888832958913494,
+    "endo_refit_sd": 0.00766244490757751,
+    "endo_boot_sd": 0.01887755102040818,
+    "endo_total_sd": 0.020373389371672414,
+    "exo_mean": 0.0012890781259618847,
+    "exo_refit_sd": 0.008418261494149664,
+    "exo_boot_sd": 0.0017857142857142859,
+    "exo_total_sd": 0.008605573896846568,
+    "regime_stable": true
+  },
+  {
+    "domain": "CAMELS(streamflow)",
+    "n_refits": 5,
+    "endo_mean": 0.41036123777787975,
+    "endo_refit_sd": 0.0008831966809884241,
+    "endo_boot_sd": 0.016581632653061226,
+    "endo_total_sd": 0.016605137091224968,
+    "exo_mean": 0.09899338471935999,
+    "exo_refit_sd": 0.0005415659115559843,
+    "exo_boot_sd": 0.008673469387755098,
+    "exo_total_sd": 0.008690360456096414,
+    "regime_stable": true
+  },
+  {
+    "domain": "HKUST(subtropical PV)",
+    "n_refits": 5,
+    "endo_mean": 0.16431402826919647,
+    "endo_refit_sd": 0.012749623608215944,
+    "endo_boot_sd": 0.016071428571428573,
+    "endo_total_sd": 0.020514475827515262,
+    "exo_mean": 0.408972724862779,
+    "exo_refit_sd": 0.00450235064450904,
+    "exo_boot_sd": 0.016071428571428573,
+    "exo_total_sd": 0.016690176082134113,
+    "regime_stable": true
+  },
+  {
+    "domain": "DKASC_M9",
+    "n_refits": 5,
+    "endo_mean": 0.05764731693743075,
+    "endo_refit_sd": 0.035461487114789914,
+    "endo_boot_sd": 0.007397959183673469,
+    "endo_total_sd": 0.03622494815007621,
+    "exo_mean": 0.5459450742495551,
+    "exo_refit_sd": 0.02099801103376277,
+    "exo_boot_sd": 0.012755102040816339,
+    "exo_total_sd": 0.02456845732734679,
+    "regime_stable": true
+  },
+  {
+    "domain": "DKASC_site31",
+    "n_refits": 5,
+    "endo_mean": 0.06032607863262539,
+    "endo_refit_sd": 0.02026388057694041,
+    "endo_boot_sd": 0.004846938775510205,
+    "endo_total_sd": 0.02083549067168919,
+    "exo_mean": 0.6588629154996044,
+    "exo_refit_sd": 0.015012997003329732,
+    "exo_boot_sd": 0.01020408163265307,
+    "exo_total_sd": 0.01815250288494221,
+    "regime_stable": true
+  },
+  {
+    "domain": "DKASC_site13",
+    "n_refits": 5,
+    "endo_mean": 0.06405955814938194,
+    "endo_refit_sd": 0.028410206169633617,
+    "endo_boot_sd": 0.005357142857142858,
+    "endo_total_sd": 0.02891087674549018,
+    "exo_mean": 0.6905631126258721,
+    "exo_refit_sd": 0.020138429417333407,
+    "exo_boot_sd": 0.008163265306122457,
+    "exo_total_sd": 0.021730053839212227,
+    "regime_stable": true
+  },
+  {
+    "domain": "Kelmarsh(wind)",
+    "n_refits": 5,
+    "endo_mean": 0.03771876266058276,
+    "endo_refit_sd": 0.014090180997017856,
+    "endo_boot_sd": 0.009693877551020408,
+    "endo_total_sd": 0.017102761838454647,
+    "exo_mean": 0.7836445028186869,
+    "exo_refit_sd": 0.014343005036584417,
+    "exo_boot_sd": 0.010714285714285695,
+    "exo_total_sd": 0.01790300845798919,
+    "regime_stable": true
+  }
+]

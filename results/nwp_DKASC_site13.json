@@ -1,0 +1,107 @@
+{
+  "site": "DKASC_site13",
+  "n_test": 2163,
+  "test_period": [
+    "2024-09-04",
+    "2025-08-22"
+  ],
+  "n_train": 37604,
+  "all_leads": {
+    "rho_endo": 0.0930954614279814,
+    "rho_exo_perfect": 0.6395818551332965,
+    "rho_exo_ecmwf": -0.04745361972951103,
+    "retained_ecmwf": -0.07419475607171679,
+    "rho_exo_ecmwf_bc": 0.10928460379531435,
+    "retained_ecmwf_bc": 0.17086883081218454,
+    "rho_exo_gfs": 0.1524007321164037,
+    "retained_gfs": 0.23828182568537937,
+    "rho_exo_gfs_bc": 0.17266787940292153,
+    "retained_gfs_bc": 0.2699699467974048
+  },
+  "by_lead": {
+    "1": {
+      "rho_endo": 0.16179390167769836,
+      "rho_exo_perfect": 0.5699202761036266,
+      "rho_exo_ecmwf": 0.08160451081538923,
+      "retained_ecmwf": 0.14318583534752388,
+      "rho_exo_ecmwf_bc": 0.19949428974481062,
+      "retained_ecmwf_bc": 0.3500389407246449,
+      "rho_exo_gfs": 0.2109913397386633,
+      "retained_gfs": 0.37021202541019876,
+      "rho_exo_gfs_bc": 0.2304159394849013,
+      "retained_gfs_bc": 0.40429503765015296
+    },
+    "2": {
+      "rho_endo": 0.11054998465629463,
+      "rho_exo_perfect": 0.6196894889998583,
+      "rho_exo_ecmwf": 0.06623144774371775,
+      "retained_ecmwf": 0.1068784430257343,
+      "rho_exo_ecmwf_bc": 0.18358161331273387,
+      "retained_ecmwf_bc": 0.2962477443485827,
+      "rho_exo_gfs": 0.24648696063255376,
+      "retained_gfs": 0.39775882116440114,
+      "rho_exo_gfs_bc": 0.2564569913936052,
+      "retained_gfs_bc": 0.4138475735767464
+    },
+    "3": {
+      "rho_endo": 0.09548909376116227,
+      "rho_exo_perfect": 0.6381911400425615,
+      "rho_exo_ecmwf": 0.0874243842849536,
+      "retained_ecmwf": 0.1369877749777648,
+      "rho_exo_ecmwf_bc": 0.18129265940149678,
+      "retained_ecmwf_bc": 0.28407266730372693,
+      "rho_exo_gfs": 0.2015855305344334,
+      "retained_gfs": 0.31587014906065525,
+      "rho_exo_gfs_bc": 0.21570577186408058,
+      "retained_gfs_bc": 0.33799556015411775
+    },
+    "4": {
+      "rho_endo": 0.07931231342231945,
+      "rho_exo_perfect": 0.6543835508961039,
+      "rho_exo_ecmwf": 0.1092970779099206,
+      "retained_ecmwf": 0.16702296040334552,
+      "rho_exo_ecmwf_bc": 0.21048983136768568,
+      "retained_ecmwf_bc": 0.321661250621969,
+      "rho_exo_gfs": 0.20032019751169164,
+      "retained_gfs": 0.3061204659520795,
+      "rho_exo_gfs_bc": 0.2163745583319444,
+      "retained_gfs_bc": 0.3306540300954143
+    },
+    "5": {
+      "rho_endo": 0.06488514850341645,
+      "rho_exo_perfect": 0.6654739213060601,
+      "rho_exo_ecmwf": 0.05216069812551248,
+      "retained_ecmwf": 0.0783812805513728,
+      "rho_exo_ecmwf_bc": 0.1627302972548569,
+      "retained_ecmwf_bc": 0.24453294418432234,
+      "rho_exo_gfs": 0.1676917611517386,
+      "retained_gfs": 0.25198847886124,
+      "rho_exo_gfs_bc": 0.17169075059377026,
+      "retained_gfs_bc": 0.25799771425574386
+    },
+    "6": {
+      "rho_endo": 0.07141972565131946,
+      "rho_exo_perfect": 0.661314225012138,
+      "rho_exo_ecmwf": -0.5399975675870707,
+      "retained_ecmwf": -0.8165521731778255,
+      "rho_exo_ecmwf_bc": -0.10062781018050068,
+      "retained_ecmwf_bc": -0.15216338372073235,
+      "rho_exo_gfs": 0.024876339521220474,
+      "retained_gfs": 0.03761651962161238,
+      "rho_exo_gfs_bc": 0.06878212115253106,
+      "retained_gfs_bc": 0.10400822869229617
+    },
+    "7": {
+      "rho_endo": 0.06794584608116366,
+      "rho_exo_perfect": 0.668394544356006,
+      "rho_exo_ecmwf": -0.1902369164167567,
+      "retained_ecmwf": -0.2846176977701827,
+      "rho_exo_ecmwf_bc": -0.07322843391004018,
+      "retained_ecmwf_bc": -0.10955869482835968,
+      "rho_exo_gfs": 0.01390338816437311,
+      "retained_gfs": 0.020801169431699865,
+      "rho_exo_gfs_bc": 0.04839509021877574,
+      "retained_gfs_bc": 0.07240497491702916
+    }
+  }
+}

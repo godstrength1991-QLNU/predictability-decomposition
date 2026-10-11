@@ -1,0 +1,66 @@
+{
+  "rows": [
+    {
+      "domain": "Reservoir(ASOS-net)",
+      "lgb_endo": 0.888832958913494,
+      "lgb_exo": 0.0012890781259618847,
+      "lin_endo": 0.9119514926682736,
+      "lin_exo": 0.001058546695329003,
+      "regime_agrees": true
+    },
+    {
+      "domain": "CAMELS(streamflow)",
+      "lgb_endo": 0.41036123777787975,
+      "lgb_exo": 0.09899338471935999,
+      "lin_endo": 0.30929007399272085,
+      "lin_exo": 0.058606521677338985,
+      "regime_agrees": true
+    },
+    {
+      "domain": "HKUST(subtropical PV)",
+      "lgb_endo": 0.16431402826919647,
+      "lgb_exo": 0.408972724862779,
+      "lin_endo": 0.006840338274784248,
+      "lin_exo": 0.3978314905488796,
+      "regime_agrees": true
+    },
+    {
+      "domain": "DKASC_M9",
+      "lgb_endo": 0.05764731693743075,
+      "lgb_exo": 0.5459450742495551,
+      "lin_endo": 0.11547192442392423,
+      "lin_exo": 0.540426504811018,
+      "regime_agrees": true
+    },
+    {
+      "domain": "DKASC_site31",
+      "lgb_endo": 0.06032607863262539,
+      "lgb_exo": 0.6588629154996044,
+      "lin_endo": 0.059534316136263914,
+      "lin_exo": 0.5911563012895913,
+      "regime_agrees": true
+    },
+    {
+      "domain": "DKASC_site13",
+      "lgb_endo": 0.06405955814938194,
+      "lgb_exo": 0.6905631126258721,
+      "lin_endo": 0.08788349693326626,
+      "lin_exo": 0.6074693214327159,
+      "regime_agrees": true
+    },
+    {
+      "domain": "Kelmarsh(wind)",
+      "lgb_endo": 0.03771876266058276,
+      "lgb_exo": 0.7836445028186869,
+      "lin_endo": -0.013326813916544765,
+      "lin_exo": 0.7024624823292448,
+      "regime_agrees": true
+    }
+  ],
+  "summary": {
+    "spearman_endo": 0.6785714285714287,
+    "spearman_exo": 1.0,
+    "mean_diff_endo": -0.02937358754684325,
+    "mean_diff_exo": -0.041322803445385976
+  }
+}

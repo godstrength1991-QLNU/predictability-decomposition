@@ -1,0 +1,11 @@
+{
+  "domain": "camels",
+  "estimator": "linear quantile regression",
+  "rho_endo": 0.30929007399272085,
+  "rho_exo": 0.058606521677338985,
+  "crps": {
+    "clim": 0.6491247164563857,
+    "hist": 0.4483568848730862,
+    "full": 0.41031394310678854
+  }
+}

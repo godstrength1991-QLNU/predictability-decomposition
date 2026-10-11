@@ -1,0 +1,62 @@
+{
+  "sites_used": [
+    "DKASC_site13",
+    "DKASC_site31"
+  ],
+  "excluded": {
+    "DKASC_M9": "420 test samples over Aug-Oct 2024 only (output record interrupted); unstable"
+  },
+  "weights": {
+    "DKASC_site13": 2163,
+    "DKASC_site31": 1837
+  },
+  "retained_by_lead": {
+    "1": {
+      "ecmwf_bc": 0.3301188252865885,
+      "gfs_bc": 0.4055203204686891,
+      "ecmwf": 0.061937538455321337,
+      "gfs": 0.35696862658205886
+    },
+    "2": {
+      "ecmwf_bc": 0.25964293537212274,
+      "gfs_bc": 0.3832411885512287,
+      "ecmwf": 0.013838866952357393,
+      "gfs": 0.35317942262765484
+    },
+    "3": {
+      "ecmwf_bc": 0.2686121224540091,
+      "gfs_bc": 0.29727132738179707,
+      "ecmwf": 0.05503512341290736,
+      "gfs": 0.2471361556357014
+    },
+    "4": {
+      "ecmwf_bc": 0.2692386408276249,
+      "gfs_bc": 0.28711310122758826,
+      "ecmwf": 0.05290033333127395,
+      "gfs": 0.25579443306436017
+    },
+    "5": {
+      "ecmwf_bc": 0.23721974322796818,
+      "gfs_bc": 0.20447245349827273,
+      "ecmwf": 3.966601312723128e-05,
+      "gfs": 0.16019973393276804
+    },
+    "6": {
+      "ecmwf_bc": -0.14206166705572496,
+      "gfs_bc": 0.06783437515757933,
+      "ecmwf": -0.799897557257824,
+      "gfs": -0.04237703226413541
+    },
+    "7": {
+      "ecmwf_bc": -0.12150603826417725,
+      "gfs_bc": 0.06858805166349441,
+      "ecmwf": -0.3864019392010249,
+      "gfs": -0.030817735406110623
+    }
+  },
+  "notes": [
+    "ECMWF leads 6-7 excluded: 6-hourly accumulated radiation beyond 144 h produces non-physical hourly peaks (e.g. 1235 W/m2)",
+    "wind speed excluded from all configurations: anemometer offline since 2024",
+    "bias correction: linear per variable and lead, cross-fitted by calendar month, forcing only"
+  ]
+}

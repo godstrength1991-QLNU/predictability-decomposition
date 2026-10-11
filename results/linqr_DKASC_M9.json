@@ -1,0 +1,11 @@
+{
+  "domain": "DKASC_M9",
+  "estimator": "linear quantile regression",
+  "rho_endo": 0.11547192442392423,
+  "rho_exo": 0.540426504811018,
+  "crps": {
+    "clim": 0.10577022163019273,
+    "hist": 0.0935567305918094,
+    "full": 0.03639569940311761
+  }
+}

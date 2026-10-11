@@ -1,0 +1,11 @@
+{
+  "domain": "kelmarsh",
+  "estimator": "linear quantile regression",
+  "rho_endo": -0.013326813916544765,
+  "rho_exo": 0.7024624823292448,
+  "crps": {
+    "clim": 233.4355615611087,
+    "hist": 236.54651385153772,
+    "full": 72.56678981340008
+  }
+}

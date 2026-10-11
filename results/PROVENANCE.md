@@ -1,24 +1,29 @@
-# Provenance of every number in the manuscript
+# Data provenance (SERRA manuscript)
 
-All values are read from the files in this folder; none are typed by hand.
+Every number in every table and figure traces to the result files below (folder `results/` unless stated).
 
-| Manuscript item | Source file(s) | Configuration |
+| Item | Content | Source |
 |---|---|---|
-| Table 2 (predictability by domain, 95% CI; DKASC drift-corrected, Eq. 21) | `enr_reservoir.json`, `enr_camels.json`, `enr_DKASC_site13.json`, `enr_DKASC_site31.json`, `enr_DKASC_M9.json`, `enr_hkust_norm.json` (HKUST, capacity-normalised), `enr_kelmarsh.json` | horizon B (daily, H=7), 13 quantile levels, 150 trees, 300 block-bootstrap replicates |
-| Table 3 (forecast value, redundancy with CI, composition/interaction) | same `enr_*.json` (ci_redu); composition and interaction in `shapley_attribution.json`; HKUST raw pooled row: `enr_hkust.json` | as above |
-| Table 4 (permutation entropy) | `permutation_entropy.json` | order 4, delay 1, median over series |
-| Table 5 (rolling-origin evaluation) | `rolling_reservoir.json`, `rolling_site13.json`, `rolling_site31.json`, `rolling_M9.json`, `rolling_kelmarsh.json` | three consecutive test blocks, primary configuration |
-| Table 6 (drift correction) | uncorrected: `enr_DKASC_*_uncorrected.json`; 365-day window: `enr_DKASC_*_rollcap.json`; 90-day window: `enr_DKASC_*.json` | trailing 99th percentile of past output |
-| Table 7 (robustness) | Scheme 1, 25 dams: `fork_check.json`; Scheme 2, 25 dams: `rho_reservoir_matched.json`; Scheme 2, 403 dams: `rho_reservoir_full.json`; HKUST 18 sites: `rho_hkust_18.json`; HKUST 58 sites: `rho_hkust_full.json` | all rows: 19 quantile levels, 200 trees |
-| Section 4.9 text, order-symmetric (Shapley) attribution | `shapley_attribution.json` (derived from the `enr_*.json` values) | horizon B |
-| Table 8 (capacity robustness) | `cap_reservoir.json`, `cap_M9.json` (drift-corrected), `cap_kelmarsh.json` | weak 50 trees/8 leaves, medium 150/31, strong 400/63 |
-| Table 9 (appendix, raw CRPS) | `enr_*.json` (CRPS_clim, CRPS_climfut, CRPS_persist, CRPS_hist, CRPS_full) | horizon B |
-| Fig. 1 (synthetic validation) | `synth_results.npz` (me, ce, mx, cx) | linear-Gaussian, Monte Carlo N = 2e5 |
-| Theory text, KSG robustness (sin rho = 0.89, MI 0.17-0.19) | `ksg_results.npz` | KSG estimator |
-| Theory text, KSG tanh/cubic rho = 1.00 | `ksg_v3_rerun_log.txt` (output of the original `ksg_v3.py`) | KSG estimator |
-| Fig. 2 (framework) | schematic; bar heights illustrative, not data | - |
-| Fig. 3 (predictability plane) | `rho_B.json` (= enr_* values, HKUST capacity-normalised); arrows: `rho_A.json`; faded HKUST point: `enr_hkust.json` | horizon A: hourly, H=24, 19 quantiles, 200 trees, one origin per 72 h |
-| Fig. 4 (horizon dependence) | `camels_sweep.json` | 19-basin subset (every fifth of 92), 150 trees |
-| Fig. 5 (forecast value) | `rho_B.json` | horizon B |
-| Fig. 6 (imperfect forecast), Eq. (22) | `degrade_kelmarsh.json`, `degrade_DKASC_site13.json`, `degrade_hkust.json`, `degrade_DKASC_M9.json`, `degrade_DKASC_site31.json`, `degrade_camels.json` | horizon B primary configuration; Gaussian forcing errors lambda in {0, 0.25, 0.5, 1}, seed 0 |
-| Fig. 7 (within-domain) | `perseries_hkust.json` (34 sites), `perseries_camels.json` (30 basins) | single series, 7 quantiles, 40 trees, 16 leaves |
+| Fig. 1 | Synthetic validation | synth_results.npz; ksg_results.npz |
+| Fig. 2 | Finite-sample error of the estimator | consistency.json; run/run_consistency.py; figures/make_fig_consistency.py |
+| Fig. 3 | Non-Gaussian validation | nongauss.json; run/run_nongauss.py; figures/make_fig_nongauss.py |
+| Fig. 4 | Framework schematic | illustrative (no data) |
+| Fig. 5 | Predictability plane | rho_B.json; rho_A.json; enr_hkust.json |
+| Fig. 6 | Horizon dependence | camels_sweep.json |
+| Fig. 7 | Forecast value and redundancy | rho_B.json |
+| Fig. 8 | Imperfect forecast (Gaussian errors) | degrade_*.json |
+| Fig. 9 | Operational forecasts (ECMWF, GFS) | nwp_DKASC_site13.json; nwp_DKASC_site31.json; nwp_summary.json; data/nwp/*.csv; run/run_nwp.py |
+| Fig. 10 | Within-domain distributions | perseries_hkust.json; perseries_camels.json |
+| Table 1 | Notation | definitions (no data) |
+| Table 2 | Decomposition by domain, 95% CI | results/enr_*.json (DKASC drift-corrected; HKUST capacity-normalised); rho_B.json |
+| Table 3 | Forecast value, redundancy, composition/interaction | enr_*.json (ci_redu); shapley_attribution.json; enr_hkust.json (raw pooled row) |
+| Table 4 | Permutation entropy | permutation_entropy.json; rho_B.json |
+| Table 5 | Uncertainty decomposition (refit + bootstrap) | refit_<domain>.json (5 seeds each); refit_summary.json; run/run_refit.py |
+| Table 6 | Two estimator families | linqr_<domain>.json; linqr_summary.json; run/run_linqr.py |
+| Table 7 | Rolling-origin evaluation | rolling_*.json; run/run_rolling.py |
+| Table 8 | Drift correction | enr_DKASC_*_uncorrected.json; enr_DKASC_*_rollcap.json; enr_DKASC_*.json |
+| Table 9 | Spatial matching and sample size | fork_check.json; rho_reservoir_matched.json; rho_reservoir_full.json; rho_hkust_18.json; rho_hkust_full.json |
+| Table 10 | Estimator capacity | cap_reservoir.json; cap_M9.json; cap_kelmarsh.json |
+| Table A.1 | Raw CRPS (appendix) | enr_*.json (CRPS_* fields) |
+
+Text numbers: checked by `run/audit_tables_serra.py` (all tables) and `run/audit_text_serra.py` (42 statements in the text, including all numbers of the estimation, refit, estimator, operational-forecast and non-Gaussian analyses).
