@@ -22,7 +22,7 @@ XMAX,YMIN,YMAX=1.0,-0.12,0.92
 ax.axhline(0,color="0.8",lw=0.8)
 ax.plot([0,YMAX],[0,YMAX],ls=":",color="0.65",lw=1)
 ax.text(0.33,0.90,"FORCING-DOMINATED\nfuture weather is key",fontsize=9,color="#c0392b",fontweight="bold",va="top",zorder=6,bbox=dict(boxstyle="round,pad=0.15",fc="white",ec="none",alpha=0.95))
-ax.text(0.97,0.17,"INERTIA-DOMINATED\nhistory suffices \u00b7 forecasts add little",fontsize=9,color="#1a5276",fontweight="bold",ha="right",va="bottom",zorder=6,bbox=dict(boxstyle="round,pad=0.15",fc="white",ec="none",alpha=0.95))
+ax.text(0.97,0.30,"INERTIA-DOMINATED\nhistory suffices \u00b7 forecasts add little",fontsize=9,color="#1a5276",fontweight="bold",ha="right",va="bottom",zorder=6,bbox=dict(boxstyle="round,pad=0.15",fc="white",ec="none",alpha=0.95))
 dk=["DKASC_site13","DKASC_site31","DKASC_M9"]
 for s in dk:  # A->B arrows
     ax_,ay_=A[s][EN],A[s][EX]; bx_,by_=B[s][EN],B[s][EX]
@@ -59,11 +59,11 @@ leg=[Line2D([0],[0],marker="D",color="w",markerfacecolor="0.3",markeredgecolor="
      Line2D([0],[0],marker="s",color="w",markerfacecolor="0.3",markeredgecolor="k",ms=10,label="Other domains, daily 7 d"),
      Line2D([0],[0],color="0.3",lw=1.2,label="A \u2192 B shift"),
      Line2D([0],[0],color="0.3",lw=1.1,marker="|",label="95% CI")]
-ax.legend(handles=leg,loc="upper center",bbox_to_anchor=(0.5,-0.095),ncol=5,fontsize=8.3,frameon=False,columnspacing=1.2,handletextpad=0.4,markerscale=0.8)
+ax.legend(handles=leg,loc="upper center",bbox_to_anchor=(0.5,-0.095),ncol=3,fontsize=8.3,frameon=False,columnspacing=1.2,handletextpad=0.4,markerscale=0.8)
 ax.set_xlim(-0.05,XMAX); ax.set_ylim(YMIN,YMAX)
 ax.set_xlabel(r"$\rho_{\mathrm{endo}}$  (endogenous — value of history, vs climatology)",fontsize=11)
 ax.set_ylabel(r"$\rho_{\mathrm{exo}}$  (exogenous — marginal value of a perfect forecast)",fontsize=11)
-plt.tight_layout(); plt.subplots_adjust(bottom=0.155)
+plt.tight_layout(); plt.subplots_adjust(bottom=0.20)
 import os as _os; _os.makedirs("out/submission",exist_ok=True)
 for _p,_d in [("out/Fig1_quadrant.png",200),("out/submission/Fig1_quadrant.png",600)]: plt.savefig(_p,dpi=_d)
 plt.savefig("out/submission/Fig1_quadrant.pdf"); plt.close()
@@ -88,7 +88,7 @@ for i,d in enumerate(border):
 ax.axhline(0,color="0.6",lw=0.8)
 ax.set_xticks(xs); ax.set_xticklabels([blab[d] if d=="HKUST(subtropical PV)" else lab[d].split(" (")[0] for d in border], rotation=18, ha="right", fontsize=9)
 ax.set_ylabel(r"Value of a perfect forecast  ($\Delta$CRPS / CRPS$_{\mathrm{clim}}$)", fontsize=11)
-ax.legend(fontsize=9, frameon=True, loc="upper right")
+ax.set_ylim(top=1.08); ax.legend(fontsize=9, frameon=True, loc="upper right")
 ax.margins(y=0.15)
 plt.tight_layout()
 for _p,_d in [("out/Fig2_redundancy.png",200),("out/submission/Fig2_redundancy.png",600)]: plt.savefig(_p,dpi=_d)

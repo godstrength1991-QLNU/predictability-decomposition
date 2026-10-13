@@ -18,6 +18,15 @@ Applied to five domains (reservoir storage, CAMELS streamflow, DKASC desert PV, 
 PV, Kelmarsh wind): reservoir storage is inertia-dominated, wind and solar power are
 forcing-dominated, and streamflow lies in between.
 
+## New in v1.3.1
+Figure scripts updated so that all lettering is at least 8 pt at the journal's print width
+(84 mm single column, 174 mm double column), with legends moved off the data where needed. Figures use Liberation Sans (metrically identical to Arial).
+The submitted figures are produced with `figures/run_scaled.py <script> <factor>`, which runs a
+figure script with all font sizes multiplied by the given factor (factors used: Fig 1 1.18,
+Fig 2 1.08, Fig 3 1.34, Fig 4 1.52, Fig 5/7 1.26, Fig 8 1.30, Fig 9 1.24, Fig 10 1.17; Fig 6 unchanged).
+`run/make_tables_serra.py` exports all tables (Word/CSV/LaTeX); `run/final_check_serra.py` runs the
+final consistency check of the submission package. Analysis code and results are unchanged.
+
 ## New in v1.3.0
 | Analysis | Script | Results |
 |---|---|---|
